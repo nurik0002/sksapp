@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>СКС — рабочая схема контроля монтажа</title>
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <h1>СКС · контроль монтажа</h1>
+      <div class="disclaimer">Рабочая схема для контроля арендодателя и последующей коммутации. Не является официальным проектом СКС.</div>
+    </div>
+    <div class="seg" id="floorSeg">
+      <button type="button" data-floor="1" class="active">1 этаж</button>
+      <button type="button" data-floor="2">2 этаж</button>
+    </div>
+    <div class="seg" id="modeSeg">
+      <button type="button" data-mode="scheme" class="active">Схема</button>
+      <button type="button" data-mode="control">Контроль монтажа</button>
+      <button type="button" data-mode="table">Таблица</button>
+      <button type="button" data-mode="accept">Приёмка</button>
+    </div>
+    <div class="actions">
+      <button type="button" id="btnAdd">Добавить кабель</button>
+      <button type="button" id="btnSave">Сохранить схему</button>
+      <button type="button" id="btnLoad">Загрузить</button>
+      <button type="button" class="primary" id="btnCsv">Экспорт CSV</button>
+      <button type="button" id="btnReset">Сбросить точки</button>
+      <input type="file" id="fileLoad" accept="application/json" hidden />
+    </div>
+  </header>
+
+  <section class="page scheme-page active" id="page-scheme">
+    <div class="layout">
+      <div class="stage-wrap">
+        <div class="stage" id="stage">
+          <img id="planImg" alt="План этажа" />
+          <svg id="overlay" viewBox="0 0 100 100" preserveAspectRatio="none"></svg>
+        </div>
+      </div>
+      <aside class="side" id="side">
+        <div class="badge">Трассы ориентировочные · ТРЕБУЕТ УТОЧНЕНИЯ</div>
+        <p class="hint">Розовая зона серверной зафиксирована и не двигается. Розетки, гильзу и коридор можно перетаскивать. Клик по линии — карточка кабеля.</p>
+        <div id="detail">
+          <h2>Кабель не выбран</h2>
+          <p class="hint">Наведите на трассу: ID, этаж, кабинет, розетка, назначение. Кликните для правки.</p>
+        </div>
+        <h3>Легенда</h3>
+        <div class="legend">
+          <div><i style="background:#3d9cf0"></i>Стационарный кабель (звезда в №14)</div>
+          <div><i style="background:#ff6b5c;height:8px;width:8px;border-radius:2px"></i>Серверная №14</div>
+          <div><i style="background:#00e5ff;height:8px;width:8px;border-radius:50%"></i>Гильза A1 (через пол коридора)</div>
+          <div><i style="background:#e8a317;border-top:2px dashed #e8a317;height:0;width:22px"></i>ТРЕБУЕТ УТОЧНЕНИЯ</div>
+          <div>● Розетка на стене (2 порта = 2 кабеля)</div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="page" id="page-control"></section>
+  <section class="page" id="page-table"></section>
+  <section class="page" id="page-accept"></section>
+
+  <div class="tooltip" id="tooltip"></div>
+  <div class="modal-back" id="modalBack">
+    <div class="modal">
+      <h3>Новый кабель</h3>
+      <div class="field"><label>Этаж</label>
+        <select id="newFloor"><option value="1">1</option><option value="2">2</option></select>
+      </div>
+      <div class="field"><label>Кабинет</label><select id="newRoom"></select></div>
+      <div class="field"><label>Розетка</label><input id="newSocket" type="number" min="1" value="1" /></div>
+      <div class="field"><label>Порт</label><select id="newPort"><option>1</option><option>2</option></select></div>
+      <div class="field"><label>Цвет</label><input id="newColor" type="color" value="#3d9cf0" /></div>
+      <div class="field"><label>Назначение</label><input id="newPurpose" value="Порт 1" /></div>
+      <div class="modal-actions">
+        <button type="button" id="newCancel">Отмена</button>
+        <button type="button" class="primary" id="newOk">Добавить</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/data.js?v=5"></script>
+  <script src="js/app.js?v=5"></script>
+</body>
+</html>

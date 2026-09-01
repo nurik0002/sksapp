@@ -1,0 +1,2042 @@
+{
+  "version": 3,
+  "disclaimer": "Рабочая схема для контроля монтажа и коммутации. Не является официальным проектом СКС.",
+  "geometry": {
+    "1": {
+      "corridor": [
+        {
+          "id": "c1w",
+          "x": 22.614107131958008,
+          "y": 34.66714859008789
+        },
+        {
+          "id": "c1s",
+          "x": 65.00691223144531,
+          "y": 34.282623291015625
+        },
+        {
+          "id": "c1e",
+          "x": 82.15767669677734,
+          "y": 33.994232177734375
+        }
+      ],
+      "sleeve": {
+        "x": 65.07606506347656,
+        "y": 34.186492919921875
+      }
+    },
+    "2": {
+      "corridor": [
+        {
+          "id": "c2w",
+          "x": 23.167356491088867,
+          "y": 40.08269500732422
+        },
+        {
+          "id": "c2s",
+          "x": 76.48685455322266,
+          "y": 40.251243591308594
+        },
+        {
+          "id": "c2e",
+          "x": 94.8824234008789,
+          "y": 40.50406265258789
+        }
+      ],
+      "sleeve": {
+        "x": 76.55601501464844,
+        "y": 40.33552169799805
+      },
+      "tambour": {
+        "x": 76.48685455322266,
+        "y": 31.90814781188965
+      },
+      "server": {
+        "x": 72.95988464355469,
+        "y": 21.45819854736328
+      },
+      "serverRoom": {
+        "x": 69.66557159423829,
+        "y": 17.374548149108886,
+        "w": 8.06610260009765,
+        "h": 11.499732780456544
+      }
+    }
+  },
+  "rooms": {
+    "1": {
+      "1": {
+        "id": "1",
+        "name": "Холл",
+        "color": "#f0a202",
+        "side": "south",
+        "bbox": {
+          "x": 70.8,
+          "y": 34.8,
+          "w": 12.4,
+          "h": 22
+        },
+        "via": null,
+        "notes": "За ресепшн, на стены зала ожидания. Отдельной розетки на ресепшн нет.",
+        "sockets": [
+          {
+            "x": 63.2088508605957,
+            "y": 41.396297454833984
+          },
+          {
+            "x": 63.13969421386719,
+            "y": 50.624847412109375
+          },
+          {
+            "x": 63.13969421386719,
+            "y": 46.68349075317383
+          }
+        ]
+      },
+      "3": {
+        "id": "3",
+        "name": "ОВО",
+        "color": "#3d9cf0",
+        "side": "south",
+        "bbox": {
+          "x": 25.4,
+          "y": 34.8,
+          "w": 23.8,
+          "h": 22
+        },
+        "via": null,
+        "notes": "13 мест + сетевые принтеры. Розетки по периметру.",
+        "sockets": [
+          {
+            "x": 28.284923553466797,
+            "y": 59.661136627197266
+          },
+          {
+            "x": 43.56846237182617,
+            "y": 59.37274169921875
+          },
+          {
+            "x": 49.03181076049805,
+            "y": 45.81830978393555
+          },
+          {
+            "x": 49.1009635925293,
+            "y": 53.22038269042969
+          },
+          {
+            "x": 47.44121170043945,
+            "y": 59.180484771728516
+          },
+          {
+            "x": 39.62655258178711,
+            "y": 59.661136627197266
+          },
+          {
+            "x": 33.81742477416992,
+            "y": 59.56501007080078
+          },
+          {
+            "x": 25.587827682495117,
+            "y": 54.56620788574219
+          },
+          {
+            "x": 25.38035774230957,
+            "y": 45.43379211425781
+          }
+        ]
+      },
+      "10": {
+        "id": "10",
+        "name": "Колл-центр",
+        "color": "#62c462",
+        "side": "north",
+        "bbox": {
+          "x": 15.6,
+          "y": 8.2,
+          "w": 6.6,
+          "h": 22.8
+        },
+        "via": null,
+        "notes": "2 рабочих места, одна двухпортовая розетка.",
+        "sockets": [
+          {
+            "x": 23.44398307800293,
+            "y": 21.11271095275879
+          }
+        ]
+      },
+      "12": {
+        "id": "12",
+        "name": "Зам. директора",
+        "color": "#c77dff",
+        "side": "north",
+        "bbox": {
+          "x": 38,
+          "y": 8.2,
+          "w": 8.2,
+          "h": 22.8
+        },
+        "via": null,
+        "notes": "",
+        "sockets": [
+          {
+            "x": 39.34992980957031,
+            "y": 13.03773021697998
+          }
+        ]
+      },
+      "13": {
+        "id": "13",
+        "name": "Операционный отдел",
+        "color": "#ff6b8a",
+        "side": "north",
+        "bbox": {
+          "x": 46.2,
+          "y": 8.2,
+          "w": 14.4,
+          "h": 22.8
+        },
+        "via": null,
+        "notes": "4 рабочих места, без СУЭО.",
+        "sockets": [
+          {
+            "x": 59.54356384277344,
+            "y": 19.478492736816406
+          },
+          {
+            "x": 47.09543228149414,
+            "y": 20.055274963378906
+          }
+        ]
+      },
+      "14": {
+        "id": "14",
+        "name": "Отделение ОО",
+        "color": "#2ec4b6",
+        "side": "north",
+        "bbox": {
+          "x": 60.6,
+          "y": 8.2,
+          "w": 21.8,
+          "h": 22.8
+        },
+        "via": null,
+        "notes": "5 розеток по периметру зала. Посадка неизвестна.",
+        "sockets": [
+          {
+            "x": 75.93360900878906,
+            "y": 9.769285202026367
+          },
+          {
+            "x": 86.51451873779297,
+            "y": 14.383562088012695
+          },
+          {
+            "x": 84.02489471435547,
+            "y": 31.30257225036621
+          },
+          {
+            "x": 66.25172424316406,
+            "y": 10.346074104309082
+          },
+          {
+            "x": 61.134159088134766,
+            "y": 24.09276580810547
+          }
+        ]
+      },
+      "15": {
+        "id": "15",
+        "name": "Обучение",
+        "color": "#f4d03f",
+        "side": "south",
+        "bbox": {
+          "x": 49.4,
+          "y": 34.8,
+          "w": 13.4,
+          "h": 22
+        },
+        "via": null,
+        "notes": "",
+        "sockets": [
+          {
+            "x": 56.70815658569336,
+            "y": 59.757266998291016
+          }
+        ]
+      }
+    },
+    "2": {
+      "10": {
+        "id": "10",
+        "name": "Адм. отдел",
+        "color": "#5dade2",
+        "side": "north",
+        "bbox": {
+          "x": 21.8,
+          "y": 9.2,
+          "w": 8.8,
+          "h": 20.8
+        },
+        "via": null,
+        "notes": "4 рабочих места, 2 розетки.",
+        "sockets": [
+          {
+            "x": 24.619640350341797,
+            "y": 27.610183715820312
+          },
+          {
+            "x": 16.80497932434082,
+            "y": 23.73358917236328
+          }
+        ]
+      },
+      "11": {
+        "id": "11",
+        "name": "Кабинет юриста",
+        "color": "#af7ac5",
+        "side": "north",
+        "bbox": {
+          "x": 39.8,
+          "y": 9.2,
+          "w": 7.8,
+          "h": 20.8
+        },
+        "via": null,
+        "notes": "",
+        "sockets": [
+          {
+            "x": 41.83955383300781,
+            "y": 23.227949142456055
+          },
+          {
+            "x": 35.13139343261719,
+            "y": 23.31222152709961
+          }
+        ]
+      },
+      "12": {
+        "id": "12",
+        "name": "Архив",
+        "color": "#d4ac0d",
+        "side": "north",
+        "bbox": {
+          "x": 47.8,
+          "y": 9.2,
+          "w": 16.6,
+          "h": 20.8
+        },
+        "via": null,
+        "notes": "Стеллажи не разводим.",
+        "sockets": [
+          {
+            "x": 45.98893356323242,
+            "y": 35.8690071105957
+          }
+        ]
+      },
+      "13": {
+        "id": "13",
+        "name": "Кабинет аудитора",
+        "color": "#85929e",
+        "side": "north",
+        "bbox": {
+          "x": 66.8,
+          "y": 9.2,
+          "w": 6.4,
+          "h": 16.6
+        },
+        "via": null,
+        "notes": "",
+        "sockets": [
+          {
+            "x": 64.17704010009766,
+            "y": 20.53118896484375
+          }
+        ]
+      },
+      "17": {
+        "id": "17",
+        "name": "Отдел контроля",
+        "color": "#e67e22",
+        "side": "north",
+        "bbox": {
+          "x": 81.2,
+          "y": 9.2,
+          "w": 13.6,
+          "h": 20.8
+        },
+        "via": null,
+        "notes": "7 человек, 8 портов.",
+        "sockets": [
+          {
+            "x": 96.68049621582031,
+            "y": 19.94127082824707
+          },
+          {
+            "x": 96.61133575439453,
+            "y": 29.04283332824707
+          },
+          {
+            "x": 87.966796875,
+            "y": 35.95328140258789
+          },
+          {
+            "x": 79.18395233154297,
+            "y": 23.227949142456055
+          }
+        ]
+      },
+      "18": {
+        "id": "18",
+        "name": "Приёмная",
+        "color": "#48c9b0",
+        "side": "south",
+        "bbox": {
+          "x": 81,
+          "y": 35.6,
+          "w": 7.2,
+          "h": 9.6
+        },
+        "via": null,
+        "notes": "",
+        "sockets": [
+          {
+            "x": 93.4301528930664,
+            "y": 38.81858825683594
+          }
+        ]
+      },
+      "19": {
+        "id": "19",
+        "name": "Кабинет директора",
+        "color": "#e74c3c",
+        "side": "south",
+        "bbox": {
+          "x": 81,
+          "y": 45.4,
+          "w": 13.8,
+          "h": 9.4
+        },
+        "via": "18",
+        "notes": "Заход через приёмную №18.",
+        "sockets": [
+          {
+            "x": 96.7496566772461,
+            "y": 63.763614654541016
+          }
+        ]
+      },
+      "10.1": {
+        "id": "10.1",
+        "name": "Кабинет IT",
+        "color": "#58d68d",
+        "side": "north",
+        "bbox": {
+          "x": 30.8,
+          "y": 9.2,
+          "w": 8.8,
+          "h": 20.8
+        },
+        "via": null,
+        "notes": "",
+        "sockets": [
+          {
+            "x": 33.33333206176758,
+            "y": 21.036828994750977
+          },
+          {
+            "x": 27.040111541748047,
+            "y": 19.856998443603516
+          }
+        ]
+      }
+    }
+  },
+  "cables": [
+    {
+      "id": "1-1-1-1",
+      "floor": 1,
+      "room": "1",
+      "socket": 1,
+      "port": 1,
+      "color": "#f0a202",
+      "purpose": "Информационный стенд",
+      "notes": "За ресепшн, на стены зала ожидания. Отдельной розетки на ресепшн нет.",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "1-1-1-2",
+      "floor": 1,
+      "room": "1",
+      "socket": 1,
+      "port": 2,
+      "color": "#f0a202",
+      "purpose": "Информационный стенд (резерв)",
+      "notes": "За ресепшн, на стены зала ожидания. Отдельной розетки на ресепшн нет.",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "1-1-2-1",
+      "floor": 1,
+      "room": "1",
+      "socket": 2,
+      "port": 1,
+      "color": "#f0a202",
+      "purpose": "Терминал СУЭО",
+      "notes": "За ресепшн, на стены зала ожидания. Отдельной розетки на ресепшн нет.",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "1-1-2-2",
+      "floor": 1,
+      "room": "1",
+      "socket": 2,
+      "port": 2,
+      "color": "#f0a202",
+      "purpose": "Терминал СУЭО (резерв)",
+      "notes": "За ресепшн, на стены зала ожидания. Отдельной розетки на ресепшн нет.",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "1-1-3-1",
+      "floor": 1,
+      "room": "1",
+      "socket": 3,
+      "port": 1,
+      "color": "#f0a202",
+      "purpose": "Самообслуживание, ПК",
+      "notes": "За ресепшн, на стены зала ожидания. Отдельной розетки на ресепшн нет.",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "1-1-3-2",
+      "floor": 1,
+      "room": "1",
+      "socket": 3,
+      "port": 2,
+      "color": "#f0a202",
+      "purpose": "Самообслуживание, телефон",
+      "notes": "За ресепшн, на стены зала ожидания. Отдельной розетки на ресепшн нет.",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "1-3-1-1",
+      "floor": 1,
+      "room": "3",
+      "socket": 1,
+      "port": 1,
+      "color": "#3d9cf0",
+      "purpose": "Порт 1 (ПК / устройство)",
+      "notes": "13 мест + сетевые принтеры. Розетки по периметру.",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "1-3-1-2",
+      "floor": 1,
+      "room": "3",
+      "socket": 1,
+      "port": 2,
+      "color": "#3d9cf0",
+      "purpose": "Порт 2 (телефон / резерв / принтер)",
+      "notes": "13 мест + сетевые принтеры. Розетки по периметру.",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "1-3-2-1",
+      "floor": 1,
+      "room": "3",
+      "socket": 2,
+      "port": 1,
+      "color": "#3d9cf0",
+      "purpose": "Порт 1 (ПК / устройство)",
+      "notes": "13 мест + сетевые принтеры. Розетки по периметру.",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "1-3-2-2",
+      "floor": 1,
+      "room": "3",
+      "socket": 2,
+      "port": 2,
+      "color": "#3d9cf0",
+      "purpose": "Порт 2 (телефон / резерв / принтер)",
+      "notes": "13 мест + сетевые принтеры. Розетки по периметру.",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "1-3-3-1",
+      "floor": 1,
+      "room": "3",
+      "socket": 3,
+      "port": 1,
+      "color": "#3d9cf0",
+      "purpose": "Порт 1 (ПК / устройство)",
+      "notes": "13 мест + сетевые принтеры. Розетки по периметру.",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "1-3-3-2",
+      "floor": 1,
+      "room": "3",
+      "socket": 3,
+      "port": 2,
+      "color": "#3d9cf0",
+      "purpose": "Порт 2 (телефон / резерв / принтер)",
+      "notes": "13 мест + сетевые принтеры. Розетки по периметру.",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "1-3-4-1",
+      "floor": 1,
+      "room": "3",
+      "socket": 4,
+      "port": 1,
+      "color": "#3d9cf0",
+      "purpose": "Порт 1 (ПК / устройство)",
+      "notes": "13 мест + сетевые принтеры. Розетки по периметру.",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "1-3-4-2",
+      "floor": 1,
+      "room": "3",
+      "socket": 4,
+      "port": 2,
+      "color": "#3d9cf0",
+      "purpose": "Порт 2 (телефон / резерв / принтер)",
+      "notes": "13 мест + сетевые принтеры. Розетки по периметру.",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "1-3-5-1",
+      "floor": 1,
+      "room": "3",
+      "socket": 5,
+      "port": 1,
+      "color": "#3d9cf0",
+      "purpose": "Порт 1 (ПК / устройство)",
+      "notes": "13 мест + сетевые принтеры. Розетки по периметру.",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "1-3-5-2",
+      "floor": 1,
+      "room": "3",
+      "socket": 5,
+      "port": 2,
+      "color": "#3d9cf0",
+      "purpose": "Порт 2 (телефон / резерв / принтер)",
+      "notes": "13 мест + сетевые принтеры. Розетки по периметру.",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "1-3-6-1",
+      "floor": 1,
+      "room": "3",
+      "socket": 6,
+      "port": 1,
+      "color": "#3d9cf0",
+      "purpose": "Порт 1 (ПК / устройство)",
+      "notes": "13 мест + сетевые принтеры. Розетки по периметру.",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "1-3-6-2",
+      "floor": 1,
+      "room": "3",
+      "socket": 6,
+      "port": 2,
+      "color": "#3d9cf0",
+      "purpose": "Порт 2 (телефон / резерв / принтер)",
+      "notes": "13 мест + сетевые принтеры. Розетки по периметру.",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "1-3-7-1",
+      "floor": 1,
+      "room": "3",
+      "socket": 7,
+      "port": 1,
+      "color": "#3d9cf0",
+      "purpose": "Порт 1 (ПК / устройство)",
+      "notes": "13 мест + сетевые принтеры. Розетки по периметру.",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "1-3-7-2",
+      "floor": 1,
+      "room": "3",
+      "socket": 7,
+      "port": 2,
+      "color": "#3d9cf0",
+      "purpose": "Порт 2 (телефон / резерв / принтер)",
+      "notes": "13 мест + сетевые принтеры. Розетки по периметру.",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "1-3-8-1",
+      "floor": 1,
+      "room": "3",
+      "socket": 8,
+      "port": 1,
+      "color": "#3d9cf0",
+      "purpose": "Порт 1 (ПК / устройство)",
+      "notes": "13 мест + сетевые принтеры. Розетки по периметру.",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "1-3-8-2",
+      "floor": 1,
+      "room": "3",
+      "socket": 8,
+      "port": 2,
+      "color": "#3d9cf0",
+      "purpose": "Порт 2 (телефон / резерв / принтер)",
+      "notes": "13 мест + сетевые принтеры. Розетки по периметру.",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "1-3-9-1",
+      "floor": 1,
+      "room": "3",
+      "socket": 9,
+      "port": 1,
+      "color": "#3d9cf0",
+      "purpose": "Порт 1 (ПК / устройство)",
+      "notes": "13 мест + сетевые принтеры. Розетки по периметру.",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "1-3-9-2",
+      "floor": 1,
+      "room": "3",
+      "socket": 9,
+      "port": 2,
+      "color": "#3d9cf0",
+      "purpose": "Порт 2 (телефон / резерв / принтер)",
+      "notes": "13 мест + сетевые принтеры. Розетки по периметру.",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "1-10-1-1",
+      "floor": 1,
+      "room": "10",
+      "socket": 1,
+      "port": 1,
+      "color": "#62c462",
+      "purpose": "Порт 1 (ПК / устройство)",
+      "notes": "2 рабочих места, одна двухпортовая розетка.",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "1-10-1-2",
+      "floor": 1,
+      "room": "10",
+      "socket": 1,
+      "port": 2,
+      "color": "#62c462",
+      "purpose": "Порт 2 (телефон / резерв / принтер)",
+      "notes": "2 рабочих места, одна двухпортовая розетка.",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "1-12-1-1",
+      "floor": 1,
+      "room": "12",
+      "socket": 1,
+      "port": 1,
+      "color": "#c77dff",
+      "purpose": "Порт 1 (ПК / устройство)",
+      "notes": "",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "1-12-1-2",
+      "floor": 1,
+      "room": "12",
+      "socket": 1,
+      "port": 2,
+      "color": "#c77dff",
+      "purpose": "Порт 2 (телефон / резерв / принтер)",
+      "notes": "",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "1-13-1-1",
+      "floor": 1,
+      "room": "13",
+      "socket": 1,
+      "port": 1,
+      "color": "#ff6b8a",
+      "purpose": "Порт 1 (ПК / устройство)",
+      "notes": "4 рабочих места, без СУЭО.",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "1-13-1-2",
+      "floor": 1,
+      "room": "13",
+      "socket": 1,
+      "port": 2,
+      "color": "#ff6b8a",
+      "purpose": "Порт 2 (телефон / резерв / принтер)",
+      "notes": "4 рабочих места, без СУЭО.",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "1-13-2-1",
+      "floor": 1,
+      "room": "13",
+      "socket": 2,
+      "port": 1,
+      "color": "#ff6b8a",
+      "purpose": "Порт 1 (ПК / устройство)",
+      "notes": "4 рабочих места, без СУЭО.",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "1-13-2-2",
+      "floor": 1,
+      "room": "13",
+      "socket": 2,
+      "port": 2,
+      "color": "#ff6b8a",
+      "purpose": "Порт 2 (телефон / резерв / принтер)",
+      "notes": "4 рабочих места, без СУЭО.",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "1-14-1-1",
+      "floor": 1,
+      "room": "14",
+      "socket": 1,
+      "port": 1,
+      "color": "#2ec4b6",
+      "purpose": "Порт 1 (ПК / устройство)",
+      "notes": "5 розеток по периметру зала. Посадка неизвестна.",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "1-14-1-2",
+      "floor": 1,
+      "room": "14",
+      "socket": 1,
+      "port": 2,
+      "color": "#2ec4b6",
+      "purpose": "Порт 2 (телефон / резерв / принтер)",
+      "notes": "5 розеток по периметру зала. Посадка неизвестна.",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "1-14-2-1",
+      "floor": 1,
+      "room": "14",
+      "socket": 2,
+      "port": 1,
+      "color": "#2ec4b6",
+      "purpose": "Порт 1 (ПК / устройство)",
+      "notes": "5 розеток по периметру зала. Посадка неизвестна.",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "1-14-2-2",
+      "floor": 1,
+      "room": "14",
+      "socket": 2,
+      "port": 2,
+      "color": "#2ec4b6",
+      "purpose": "Порт 2 (телефон / резерв / принтер)",
+      "notes": "5 розеток по периметру зала. Посадка неизвестна.",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "1-14-3-1",
+      "floor": 1,
+      "room": "14",
+      "socket": 3,
+      "port": 1,
+      "color": "#2ec4b6",
+      "purpose": "Порт 1 (ПК / устройство)",
+      "notes": "5 розеток по периметру зала. Посадка неизвестна.",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "1-14-3-2",
+      "floor": 1,
+      "room": "14",
+      "socket": 3,
+      "port": 2,
+      "color": "#2ec4b6",
+      "purpose": "Порт 2 (телефон / резерв / принтер)",
+      "notes": "5 розеток по периметру зала. Посадка неизвестна.",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "1-14-4-1",
+      "floor": 1,
+      "room": "14",
+      "socket": 4,
+      "port": 1,
+      "color": "#2ec4b6",
+      "purpose": "Порт 1 (ПК / устройство)",
+      "notes": "5 розеток по периметру зала. Посадка неизвестна.",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "1-14-4-2",
+      "floor": 1,
+      "room": "14",
+      "socket": 4,
+      "port": 2,
+      "color": "#2ec4b6",
+      "purpose": "Порт 2 (телефон / резерв / принтер)",
+      "notes": "5 розеток по периметру зала. Посадка неизвестна.",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "1-14-5-1",
+      "floor": 1,
+      "room": "14",
+      "socket": 5,
+      "port": 1,
+      "color": "#2ec4b6",
+      "purpose": "Порт 1 (ПК / устройство)",
+      "notes": "5 розеток по периметру зала. Посадка неизвестна.",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "1-14-5-2",
+      "floor": 1,
+      "room": "14",
+      "socket": 5,
+      "port": 2,
+      "color": "#2ec4b6",
+      "purpose": "Порт 2 (телефон / резерв / принтер)",
+      "notes": "5 розеток по периметру зала. Посадка неизвестна.",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "1-15-1-1",
+      "floor": 1,
+      "room": "15",
+      "socket": 1,
+      "port": 1,
+      "color": "#f4d03f",
+      "purpose": "Порт 1 (ПК / устройство)",
+      "notes": "",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "1-15-1-2",
+      "floor": 1,
+      "room": "15",
+      "socket": 1,
+      "port": 2,
+      "color": "#f4d03f",
+      "purpose": "Порт 2 (телефон / резерв / принтер)",
+      "notes": "",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "2-10-1-1",
+      "floor": 2,
+      "room": "10",
+      "socket": 1,
+      "port": 1,
+      "color": "#5dade2",
+      "purpose": "Порт 1 (ПК / устройство)",
+      "notes": "4 рабочих места, 2 розетки.",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "2-10-1-2",
+      "floor": 2,
+      "room": "10",
+      "socket": 1,
+      "port": 2,
+      "color": "#5dade2",
+      "purpose": "Порт 2 (телефон / резерв / принтер)",
+      "notes": "4 рабочих места, 2 розетки.",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "2-10-2-1",
+      "floor": 2,
+      "room": "10",
+      "socket": 2,
+      "port": 1,
+      "color": "#5dade2",
+      "purpose": "Порт 1 (ПК / устройство)",
+      "notes": "4 рабочих места, 2 розетки.",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "2-10-2-2",
+      "floor": 2,
+      "room": "10",
+      "socket": 2,
+      "port": 2,
+      "color": "#5dade2",
+      "purpose": "Порт 2 (телефон / резерв / принтер)",
+      "notes": "4 рабочих места, 2 розетки.",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "2-10.1-1-1",
+      "floor": 2,
+      "room": "10.1",
+      "socket": 1,
+      "port": 1,
+      "color": "#58d68d",
+      "purpose": "Порт 1 (ПК / устройство)",
+      "notes": "",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "2-10.1-1-2",
+      "floor": 2,
+      "room": "10.1",
+      "socket": 1,
+      "port": 2,
+      "color": "#58d68d",
+      "purpose": "Порт 2 (телефон / резерв / принтер)",
+      "notes": "",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "2-10.1-2-1",
+      "floor": 2,
+      "room": "10.1",
+      "socket": 2,
+      "port": 1,
+      "color": "#58d68d",
+      "purpose": "Порт 1 (ПК / устройство)",
+      "notes": "",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "2-10.1-2-2",
+      "floor": 2,
+      "room": "10.1",
+      "socket": 2,
+      "port": 2,
+      "color": "#58d68d",
+      "purpose": "Порт 2 (телефон / резерв / принтер)",
+      "notes": "",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "2-11-1-1",
+      "floor": 2,
+      "room": "11",
+      "socket": 1,
+      "port": 1,
+      "color": "#af7ac5",
+      "purpose": "Порт 1 (ПК / устройство)",
+      "notes": "",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "2-11-1-2",
+      "floor": 2,
+      "room": "11",
+      "socket": 1,
+      "port": 2,
+      "color": "#af7ac5",
+      "purpose": "Порт 2 (телефон / резерв / принтер)",
+      "notes": "",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "2-11-2-1",
+      "floor": 2,
+      "room": "11",
+      "socket": 2,
+      "port": 1,
+      "color": "#af7ac5",
+      "purpose": "Порт 1 (ПК / устройство)",
+      "notes": "",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "2-11-2-2",
+      "floor": 2,
+      "room": "11",
+      "socket": 2,
+      "port": 2,
+      "color": "#af7ac5",
+      "purpose": "Порт 2 (телефон / резерв / принтер)",
+      "notes": "",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "2-12-1-1",
+      "floor": 2,
+      "room": "12",
+      "socket": 1,
+      "port": 1,
+      "color": "#d4ac0d",
+      "purpose": "Порт 1 (ПК / устройство)",
+      "notes": "Стеллажи не разводим.",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "2-12-1-2",
+      "floor": 2,
+      "room": "12",
+      "socket": 1,
+      "port": 2,
+      "color": "#d4ac0d",
+      "purpose": "Порт 2 (телефон / резерв / принтер)",
+      "notes": "Стеллажи не разводим.",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "2-13-1-1",
+      "floor": 2,
+      "room": "13",
+      "socket": 1,
+      "port": 1,
+      "color": "#85929e",
+      "purpose": "Порт 1 (ПК / устройство)",
+      "notes": "",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "2-13-1-2",
+      "floor": 2,
+      "room": "13",
+      "socket": 1,
+      "port": 2,
+      "color": "#85929e",
+      "purpose": "Порт 2 (телефон / резерв / принтер)",
+      "notes": "",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "2-17-1-1",
+      "floor": 2,
+      "room": "17",
+      "socket": 1,
+      "port": 1,
+      "color": "#e67e22",
+      "purpose": "Порт 1 (ПК / устройство)",
+      "notes": "7 человек, 8 портов.",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "2-17-1-2",
+      "floor": 2,
+      "room": "17",
+      "socket": 1,
+      "port": 2,
+      "color": "#e67e22",
+      "purpose": "Порт 2 (телефон / резерв / принтер)",
+      "notes": "7 человек, 8 портов.",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "2-17-2-1",
+      "floor": 2,
+      "room": "17",
+      "socket": 2,
+      "port": 1,
+      "color": "#e67e22",
+      "purpose": "Порт 1 (ПК / устройство)",
+      "notes": "7 человек, 8 портов.",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "2-17-2-2",
+      "floor": 2,
+      "room": "17",
+      "socket": 2,
+      "port": 2,
+      "color": "#e67e22",
+      "purpose": "Порт 2 (телефон / резерв / принтер)",
+      "notes": "7 человек, 8 портов.",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "2-17-3-1",
+      "floor": 2,
+      "room": "17",
+      "socket": 3,
+      "port": 1,
+      "color": "#e67e22",
+      "purpose": "Порт 1 (ПК / устройство)",
+      "notes": "7 человек, 8 портов.",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "2-17-3-2",
+      "floor": 2,
+      "room": "17",
+      "socket": 3,
+      "port": 2,
+      "color": "#e67e22",
+      "purpose": "Порт 2 (телефон / резерв / принтер)",
+      "notes": "7 человек, 8 портов.",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "2-17-4-1",
+      "floor": 2,
+      "room": "17",
+      "socket": 4,
+      "port": 1,
+      "color": "#e67e22",
+      "purpose": "Порт 1 (ПК / устройство)",
+      "notes": "7 человек, 8 портов.",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "2-17-4-2",
+      "floor": 2,
+      "room": "17",
+      "socket": 4,
+      "port": 2,
+      "color": "#e67e22",
+      "purpose": "Порт 2 (телефон / резерв / принтер)",
+      "notes": "7 человек, 8 портов.",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "2-18-1-1",
+      "floor": 2,
+      "room": "18",
+      "socket": 1,
+      "port": 1,
+      "color": "#48c9b0",
+      "purpose": "Порт 1 (ПК / устройство)",
+      "notes": "",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "2-18-1-2",
+      "floor": 2,
+      "room": "18",
+      "socket": 1,
+      "port": 2,
+      "color": "#48c9b0",
+      "purpose": "Порт 2 (телефон / резерв / принтер)",
+      "notes": "",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "2-19-1-1",
+      "floor": 2,
+      "room": "19",
+      "socket": 1,
+      "port": 1,
+      "color": "#e74c3c",
+      "purpose": "Порт 1 (ПК / устройство)",
+      "notes": "Заход через приёмную №18.",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "2-19-1-2",
+      "floor": 2,
+      "room": "19",
+      "socket": 1,
+      "port": 2,
+      "color": "#e74c3c",
+      "purpose": "Порт 2 (телефон / резерв / принтер)",
+      "notes": "Заход через приёмную №18.",
+      "patchPanel": "",
+      "switchPort": "",
+      "routeConfirmed": false,
+      "install": {
+        "laid": false,
+        "labeled": false,
+        "outlet": false,
+        "inServer": false,
+        "patched": false,
+        "tested": false,
+        "passed": false
+      }
+    }
+  ]
+}
