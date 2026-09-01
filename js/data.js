@@ -61,6 +61,38 @@ const CHECKLIST = [
   "Маркировка на объекте совпадает с этой рабочей схемой"
 ];
 
+const DEFAULT_SOCKETS = {
+  1: {
+    "1": [{ x: 63.21, y: 41.4 }, { x: 63.14, y: 50.62 }, { x: 63.14, y: 46.68 }],
+    "3": [
+      { x: 28.28, y: 59.66 }, { x: 43.57, y: 59.37 }, { x: 49.03, y: 45.82 },
+      { x: 49.1, y: 53.22 }, { x: 47.44, y: 59.18 }, { x: 39.63, y: 59.66 },
+      { x: 33.82, y: 59.57 }, { x: 25.59, y: 54.57 }, { x: 25.38, y: 45.43 }
+    ],
+    "10": [{ x: 23.44, y: 21.11 }],
+    "12": [{ x: 39.35, y: 13.04 }],
+    "13": [{ x: 59.54, y: 19.48 }, { x: 47.1, y: 20.06 }],
+    "14": [
+      { x: 75.93, y: 9.77 }, { x: 86.51, y: 14.38 }, { x: 84.02, y: 31.3 },
+      { x: 66.25, y: 10.35 }, { x: 61.13, y: 24.09 }
+    ],
+    "15": [{ x: 56.71, y: 59.76 }]
+  },
+  2: {
+    "10": [{ x: 24.62, y: 27.61 }, { x: 16.8, y: 23.73 }],
+    "10.1": [{ x: 33.33, y: 21.04 }, { x: 27.04, y: 19.86 }],
+    "11": [{ x: 41.84, y: 23.23 }, { x: 35.13, y: 23.31 }],
+    "12": [{ x: 45.99, y: 35.87 }],
+    "13": [{ x: 64.18, y: 20.53 }],
+    "17": [
+      { x: 96.68, y: 19.94 }, { x: 96.61, y: 29.04 },
+      { x: 87.97, y: 35.95 }, { x: 79.18, y: 23.23 }
+    ],
+    "18": [{ x: 93.43, y: 38.82 }],
+    "19": [{ x: 96.75, y: 63.76 }]
+  }
+};
+
 function aroundWalls(x, y, w, h, n, inset) {
   const pad = inset ?? 1.4;
   const L = x + pad, T = y + pad, R = x + w - pad, B = y + h - pad;
@@ -91,28 +123,31 @@ function buildDefaultState() {
   const geometry = {
     1: {
       corridor: [
-        { id: "c1w", x: 12.5, y: 32.6 },
-        { id: "c1s", x: 66.0, y: 32.6 },
-        { id: "c1e", x: 82.0, y: 32.6 }
+        { id: "c1w", x: 22.61, y: 34.67 },
+        { id: "c1s", x: 65.01, y: 34.28 },
+        { id: "c1e", x: 82.16, y: 33.99 }
       ],
-      sleeve: { x: 66.0, y: 32.6 }
+      sleeve: { x: 65.08, y: 34.19 }
     },
     2: {
       corridor: [
-        { id: "c2w", x: 16.5, y: 32.4 },
-        { id: "c2s", x: 76.4, y: 32.4 },
-        { id: "c2e", x: 94.2, y: 32.4 }
+        { id: "c2w", x: 23.17, y: 40.08 },
+        { id: "c2s", x: 76.49, y: 40.25 },
+        { id: "c2e", x: 94.88, y: 40.50 }
       ],
-      sleeve: { x: 76.4, y: 32.4 },
-      tambour: { x: 76.4, y: 27.6 },
-      server: { x: 76.8, y: 12.4 },
-      serverRoom: { x: 73.4, y: 9.2, w: 7.4, h: 16.8 }
+      sleeve: { x: 76.56, y: 40.34 },
+      tambour: { x: 76.49, y: 31.91 },
+      server: { x: 72.96, y: 21.46 },
+      serverRoom: { x: 69.67, y: 17.37, w: 8.07, h: 11.50 }
     }
   };
 
   for (const floor of [1, 2]) {
     for (const spec of ROOM_SPECS[floor]) {
-      const sockets = aroundWalls(spec.bbox[0], spec.bbox[1], spec.bbox[2], spec.bbox[3], spec.sockets);
+      const saved = DEFAULT_SOCKETS[floor] && DEFAULT_SOCKETS[floor][spec.id];
+      const sockets = saved
+        ? saved.map((s) => ({ x: s.x, y: s.y }))
+        : aroundWalls(spec.bbox[0], spec.bbox[1], spec.bbox[2], spec.bbox[3], spec.sockets);
       rooms[floor][spec.id] = {
         id: spec.id,
         name: spec.name,
@@ -146,7 +181,7 @@ function buildDefaultState() {
   }
 
   return {
-    version: 3,
+    version: 4,
     disclaimer: "Рабочая схема для контроля монтажа и коммутации. Не является официальным проектом СКС.",
     geometry,
     rooms,

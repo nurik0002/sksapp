@@ -1,4 +1,4 @@
-const STORE_KEY = "sks-enpf-schema-v3";
+const STORE_KEY = "sks-enpf-schema-v4";
 
 const state = {
   floor: 1,
@@ -16,7 +16,7 @@ function loadState() {
     const raw = localStorage.getItem(STORE_KEY);
     if (raw) {
       const parsed = JSON.parse(raw);
-      if (parsed && parsed.version >= 3 && parsed.cables && parsed.rooms && parsed.geometry) {
+      if (parsed && parsed.version >= 4 && parsed.cables && parsed.rooms && parsed.geometry) {
         state.data = parsed;
         return;
       }
