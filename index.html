@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>СКС — рабочая схема контроля монтажа</title>
-  <link rel="stylesheet" href="css/app.css" />
+  <link rel="stylesheet" href="css/app.css?v=15" />
 </head>
 <body>
   <header class="top">
@@ -27,6 +27,7 @@
       <button type="button" id="btnSave">Сохранить схему</button>
       <button type="button" id="btnLoad">Загрузить</button>
       <button type="button" class="primary" id="btnCsv">Экспорт CSV</button>
+      <button type="button" id="btnJpeg" title="Скачать текущий этаж: план и трассы">Экспорт JPEG</button>
       <button type="button" id="btnReset">Сбросить точки</button>
       <input type="file" id="fileLoad" accept="application/json" hidden />
     </div>
@@ -42,18 +43,19 @@
       </div>
       <aside class="side" id="side">
         <div class="badge">Трассы ориентировочные · ТРЕБУЕТ УТОЧНЕНИЯ</div>
-        <p class="hint">Розовая зона серверной зафиксирована и не двигается. Розетки, гильзу и коридор можно перетаскивать. Клик по линии — карточка кабеля.</p>
+        <p class="hint">Розовая зона серверной на заднем слое: перетащите заливку, углы меняют размер. Розетки, гильзу, вход в №6 и коридор тоже можно двигать. Клик по линии — карточка кабеля. Изгибы: выберите кабель → «Добавить изгиб».</p>
         <div id="detail">
           <h2>Кабель не выбран</h2>
           <p class="hint">Наведите на трассу: ID, этаж, кабинет, розетка, назначение. Кликните для правки.</p>
         </div>
         <h3>Легенда</h3>
         <div class="legend">
-          <div><i style="background:#3d9cf0"></i>Стационарный кабель (звезда в №14)</div>
-          <div><i style="background:#ff6b5c;height:8px;width:8px;border-radius:2px"></i>Серверная №14</div>
-          <div><i style="background:#00e5ff;height:8px;width:8px;border-radius:50%"></i>Гильза A1 (через пол коридора)</div>
-          <div><i style="background:#e8a317;border-top:2px dashed #e8a317;height:0;width:22px"></i>ТРЕБУЕТ УТОЧНЕНИЯ</div>
+          <div><i class="lg-double"></i>Кабель (двойная линия, звезда в №6)</div>
+          <div><i style="background:#ff6b5c;height:8px;width:8px;border-radius:2px"></i>Серверная · комната водителей №6</div>
+          <div><i style="background:#00e5ff;height:8px;width:8px;border-radius:50%"></i>Гильза A1 (коридор у санузла)</div>
+          <div><i style="background:#e8a317;height:8px;width:8px;border-radius:2px"></i>ТРЕБУЕТ УТОЧНЕНИЯ (в карточке)</div>
           <div>● Розетка на стене (2 порта = 2 кабеля)</div>
+          <div><i style="background:#ffe566;height:8px;width:8px;transform:rotate(45deg)"></i>Угол трассы (изгиб в кабинет)</div>
         </div>
       </aside>
     </div>
@@ -82,7 +84,8 @@
     </div>
   </div>
 
-  <script src="js/data.js?v=6"></script>
-  <script src="js/app.js?v=6"></script>
+  <script src="js/plans-embed.js?v=16"></script>
+  <script src="js/data.js?v=16"></script>
+  <script src="js/app.js?v=16"></script>
 </body>
 </html>
