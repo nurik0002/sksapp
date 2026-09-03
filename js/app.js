@@ -1,4 +1,4 @@
-const STORE_KEY = "sks-enpf-schema-v5";
+const STORE_KEY = "sks-enpf-schema-v6";
 
 const state = {
   floor: 1,
@@ -19,14 +19,31 @@ function migrateGeometry(data) {
   }
   const fresh = buildDefaultState();
   data.geometry = fresh.geometry;
-  data.version = 5;
+  data.version = 6;
   return data;
+}
+
+function mergeInstallFrom(oldData, fresh) {
+  if (!oldData || !oldData.cables) return fresh;
+  const byId = Object.fromEntries(oldData.cables.map((c) => [c.id, c]));
+  for (const c of fresh.cables) {
+    const prev = byId[c.id];
+    if (prev) {
+      c.install = prev.install;
+      c.patchPanel = prev.patchPanel;
+      c.switchPort = prev.switchPort;
+      c.routeConfirmed = prev.routeConfirmed;
+      c.notes = prev.notes;
+      c.purpose = prev.purpose;
+    }
+  }
+  if (oldData.accept) fresh.accept = oldData.accept;
+  return fresh;
 }
 
 function loadState() {
   try {
     let raw = localStorage.getItem(STORE_KEY);
-    if (!raw) raw = localStorage.getItem("sks-enpf-schema-v4");
     if (raw) {
       const parsed = JSON.parse(raw);
       if (parsed && parsed.cables && parsed.rooms && parsed.geometry) {
@@ -35,6 +52,13 @@ function loadState() {
         return;
       }
     }
+    const prevRaw = localStorage.getItem("sks-enpf-schema-v5") || localStorage.getItem("sks-enpf-schema-v4");
+    state.data = buildDefaultState();
+    if (prevRaw) {
+      try { state.data = mergeInstallFrom(JSON.parse(prevRaw), state.data); } catch (e) { /* ignore */ }
+    }
+    saveLocal();
+    return;
   } catch (e) { /* ignore */ }
   state.data = buildDefaultState();
 }
@@ -622,7 +646,7 @@ function persist() {
 function setFloor(n) {
   state.floor = n;
   document.querySelectorAll("#floorSeg button").forEach((b) => b.classList.toggle("active", Number(b.dataset.floor) === n));
-  document.getElementById("planImg").src = n === 1 ? "plans/floor1.jpg?v=16" : "plans/floor2.jpg?v=16";
+  document.getElementById("planImg").src = n === 1 ? "plans/floor1.jpg?v=17" : "plans/floor2.jpg?v=17";
   renderOverlay();
 }
 
@@ -1012,22 +1036,7 @@ function init() {
     if (!confirm("Вернуть розетки, гильзу и коридор к исходным точкам? Отметки монтажа сохранятся, если совпадут ID.")) {
       return;
     }
-    const old = state.data.cables;
-    const fresh = buildDefaultState();
-    const byId = Object.fromEntries(old.map((c) => [c.id, c]));
-    for (const c of fresh.cables) {
-      const prev = byId[c.id];
-      if (prev) {
-        c.install = prev.install;
-        c.patchPanel = prev.patchPanel;
-        c.switchPort = prev.switchPort;
-        c.routeConfirmed = prev.routeConfirmed;
-        c.notes = prev.notes;
-        c.purpose = prev.purpose;
-      }
-    }
-    fresh.accept = state.data.accept;
-    state.data = fresh;
+    state.data = mergeInstallFrom(state.data, buildDefaultState());
     persist();
     renderOverlay();
     renderDetail();
